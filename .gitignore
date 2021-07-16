@@ -1,0 +1,5 @@
+.idea
+*.iml
+build
+target
+unit_2_compile/maven_compile/app/dependency-reduced-pom.xml

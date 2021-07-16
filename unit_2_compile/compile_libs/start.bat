@@ -1,0 +1,2 @@
+call javac -sourcepath ./src -d build/classes -cp ./libs/commons-lang3-3.12.0.jar;./libs/commons-math3-3.6.1.jar src/ua/com/alevel/greeting/Hello.java src/ua/com/alevel/time/CurrentTime.java src/ua/com/alevel/Main.java
+call java -cp build/classes/;./libs/commons-lang3-3.12.0.jar;./libs/commons-math3-3.6.1.jar ua.com.alevel.Main
