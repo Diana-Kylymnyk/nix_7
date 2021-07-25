@@ -1,0 +1,19 @@
+public class Main {
+    public static void printMenu() {
+
+    где отступ???)
+
+    и что за название класса Task_x ?)
+
+            int lesson = 45;
+            int bigBreak = 15;
+            int smallBreak = 5;
+
+    это нужно выносить в константы - private static final int
+
+            (time / 60 + 9 + ":" + time % 60)
+
+    в теории я могу догадаться, что такое 60 и 9 - но я не должен этого делать)
+    также нужно выносить в константы
+
+оценка 9 из 10
