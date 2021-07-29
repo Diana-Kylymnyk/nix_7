@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>unit_3_base_types</module>
+        <module>unit_4_arrays</module>
     </modules>
 
     <properties>
