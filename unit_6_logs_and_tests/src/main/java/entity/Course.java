@@ -9,6 +9,7 @@ import util.MyArrayList;
 @Getter
 @ToString
 public class Course {
+
     private String id;
     private String courseTitle;
     private int credit;

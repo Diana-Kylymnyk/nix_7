@@ -1,6 +1,7 @@
 package util;
 
 public class MyArrayList<Type> {
+
     private int length;
     private int size = 0;
     private Type[] array;

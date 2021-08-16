@@ -9,6 +9,7 @@ import util.MyArrayList;
 @Setter
 @ToString
 public class Student {
+
     private String id;
     private String firstName;
     private String lastName;
