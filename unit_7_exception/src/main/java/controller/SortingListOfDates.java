@@ -23,8 +23,8 @@ public class SortingListOfDates {
             System.out.println("Choose date input format\n" +
                     "1. dd/mm/yyyy 00:00:00:000 (or dd-mm-yyyy)\n" +
                     "2. m/d/yyyy 00:00:00:000 (or m-d-yyyy)\n" +
-                    "3. Month d yyyy 00:00:00:000\n" +
-                    "4. dd Month yyyy 00:00:00:000");
+                    "3. mmm-d-yy 00:00:00:000 (or Month d yyyy)\n" +
+                    "4. dd-mmm-yyyy 00:00:00:000 (or dd Month yyyy)");
             format = SCANNER.nextLine();
         } while (Integer.parseInt(format) > 4 || Integer.parseInt(format) <= 0);
 

@@ -108,7 +108,12 @@ public class ConvertStringToDate {
         LOGGER_INFO.info("Converting third format to string");
         MyDate myDate = new MyDate();
 
-        String[] split = stringDate.split("[ ]");
+        String[] split;
+        if (stringDate.contains("-")) {
+            split = stringDate.split("[- ]", 4);
+        } else {
+            split = stringDate.split("[ ]");
+        }
         try {
             int month;
             for (int i = 0; i < MONTHS.length; i++) {
@@ -142,7 +147,12 @@ public class ConvertStringToDate {
         LOGGER_INFO.info("Converting fourth format to string");
         MyDate myDate = new MyDate();
 
-        String[] split = stringDate.split("[ ]");
+        String[] split;
+        if (stringDate.contains("-")) {
+            split = stringDate.split("[- ]", 4);
+        } else {
+            split = stringDate.split("[ ]");
+        }
         try {
             if (!split[0].equals("")) {
                 myDate.setDay(Integer.parseInt(split[0]));

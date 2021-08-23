@@ -157,13 +157,29 @@ public class CheckFormat {
         LOGGER_INFO.info("Check third format");
         try {
             int month;
-            String[] splitArr = stringDate.split("[ ]");
-
+            String[] splitArr;
+            if (stringDate.contains("-")) {
+                splitArr = stringDate.split("[- ]",4);
+            } else {
+                splitArr = stringDate.split("[ ]");
+            }
             if (splitArr.length >= 3) {
+                int day;
+                if (splitArr[1].equals("")) {
+                    day = 1;
+                } else {
+                    day = Integer.parseInt(splitArr[1]);
+                }
+                int year;
+                if (splitArr[2].equals("")) {
+                    year = 0;
+                } else {
+                    year = Integer.parseInt(splitArr[2]);
+                }
                 for (int i = 0; i < MONTHS.length; i++) {
                     if (splitArr[0].equalsIgnoreCase(MONTHS[i])) {
                         month = i + 1;
-                        return MyDate.isValidDate(Integer.parseInt(splitArr[2]), month, Integer.parseInt(splitArr[1]));
+                        return MyDate.isValidDate(year, month, day);
                     }
                 }
             }
@@ -178,14 +194,30 @@ public class CheckFormat {
         LOGGER_INFO.info("Check fourth format");
         try {
             int month;
-            String[] splitArr = stringDate.split("[ ]");
-
+            String[] splitArr;
+            if (stringDate.contains("-")) {
+                splitArr = stringDate.split("[- ]",4);
+            } else {
+                splitArr = stringDate.split("[ ]");
+            }
             if (splitArr.length >= 3) {
+                int day;
+                if (splitArr[0].equals("")) {
+                    day = 1;
+                } else {
+                    day = Integer.parseInt(splitArr[0]);
+                }
+                int year;
+                if (splitArr[2].equals("")) {
+                    year = 0;
+                } else {
+                    year = Integer.parseInt(splitArr[2]);
+                }
                 if (splitArr[0].length() == 2 || splitArr[0].matches("")) {
                     for (int i = 0; i < MONTHS.length; i++) {
                         if (splitArr[1].equalsIgnoreCase(MONTHS[i])) {
                             month = i + 1;
-                            return MyDate.isValidDate(Integer.parseInt(splitArr[2]), month, Integer.parseInt(splitArr[0]));
+                            return MyDate.isValidDate(year, month, day);
                         }
                     }
                 }
