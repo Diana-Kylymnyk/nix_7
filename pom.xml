@@ -15,6 +15,7 @@
         <module>lib_unit_5</module>
         <module>module_1</module>
         <module>unit_6_logs_and_tests</module>
+        <module>unit_7_exception</module>
     </modules>
 
     <properties>
