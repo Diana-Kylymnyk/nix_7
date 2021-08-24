@@ -12,6 +12,27 @@ public class ConvertStringToDate {
     private static final String[] MONTHS = {"January", "February", "March", "April", "May", "June", "July",
             "August", "September", "October", "November", "December"};
 
+    public MyDate stringToDate(String date, String choice) {
+        MyDate myDate = new MyDate();
+        switch (choice) {
+            case "1":
+                myDate = firstFormat(date);
+                break;
+            case "2":
+                myDate = secondFormat(date);
+                break;
+            case "3":
+                myDate = thirdFormat(date);
+                break;
+            case "4":
+                myDate = fourthFormat(date);
+                break;
+            default:
+                System.out.println("Incorrect input");
+        }
+        return myDate;
+    }
+
     public static MyDate firstFormat(String stringDate) {
         LOGGER_INFO.info("Converting first format to string");
         MyDate myDate = new MyDate();
@@ -112,20 +133,24 @@ public class ConvertStringToDate {
         if (stringDate.contains("-")) {
             split = stringDate.split("[- ]", 4);
         } else {
-            split = stringDate.split("[ ]");
+            split = stringDate.split("[ ]", 4);
         }
         try {
             int month;
-            for (int i = 0; i < MONTHS.length; i++) {
-                if (split[0].equals(MONTHS[i])) {
-                    month = i + 1;
-                    myDate.setMonth(month);
+            if (!split[0].equals("")) {
+                for (int i = 0; i < MONTHS.length; i++) {
+                    if (split[0].equals(MONTHS[i])) {
+                        month = i + 1;
+                        myDate.setMonth(month);
+                    }
                 }
+            } else {
+                myDate.setMonth(1);
             }
             if (!split[1].equals("")) {
                 myDate.setDay(Integer.parseInt(split[1]));
             } else {
-                myDate.setDay(0);
+                myDate.setDay(1);
             }
             if (!split[2].equals("")) {
                 myDate.setYear(Integer.parseInt(split[2]));
@@ -151,20 +176,24 @@ public class ConvertStringToDate {
         if (stringDate.contains("-")) {
             split = stringDate.split("[- ]", 4);
         } else {
-            split = stringDate.split("[ ]");
+            split = stringDate.split("[ ]", 4);
         }
         try {
             if (!split[0].equals("")) {
                 myDate.setDay(Integer.parseInt(split[0]));
             } else {
-                myDate.setDay(0);
+                myDate.setDay(1);
             }
             int month;
-            for (int i = 0; i < MONTHS.length; i++) {
-                if (split[1].equals(MONTHS[i])) {
-                    month = i + 1;
-                    myDate.setMonth(month);
+            if (!split[1].equals("")) {
+                for (int i = 0; i < MONTHS.length; i++) {
+                    if (split[1].equals(MONTHS[i])) {
+                        month = i + 1;
+                        myDate.setMonth(month);
+                    }
                 }
+            } else {
+                myDate.setMonth(1);
             }
             if (!split[2].equals("")) {
                 myDate.setYear(Integer.parseInt(split[2]));
@@ -205,26 +234,5 @@ public class ConvertStringToDate {
             LOGGER_ERROR.error("Incorrect number format");
             throw new NumberFormatException();
         }
-    }
-
-    public MyDate stringToDate(String date, String choice) {
-        MyDate myDate = new MyDate();
-        switch (choice) {
-            case "1":
-                myDate = firstFormat(date);
-                break;
-            case "2":
-                myDate = secondFormat(date);
-                break;
-            case "3":
-                myDate = thirdFormat(date);
-                break;
-            case "4":
-                myDate = fourthFormat(date);
-                break;
-            default:
-                System.out.println("Incorrect input");
-        }
-        return myDate;
     }
 }
