@@ -6024,8 +6024,8 @@ Changes that could break older environments:
   release has been removed for now.  This change may affect only
   the 1.5Beta/1.6Alpha users.  An attempt will be made to add this
   feature back into Ant 1.6.
-* Shipped XML parser is now Xerces 2.0.1 along with the XML Parser APIs.
-  XML Parser APIs is a separate jar that contains the necessary
+* Shipped XML parser is now Xerces 2.0.1 along with the XML JSONParser APIs.
+  XML JSONParser APIs is a separate jar that contains the necessary
   JAXP/DOM/SAX classes.
 
 * <telnet> was fixed to expand properties inside nested <read> and

@@ -17,6 +17,7 @@
         <module>unit_6_logs_and_tests</module>
         <module>unit_7_exception</module>
         <module>unit_8_collection</module>
+        <module>unit_9_ionio</module>
     </modules>
 
     <properties>

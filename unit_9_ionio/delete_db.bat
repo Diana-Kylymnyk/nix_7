@@ -1,0 +1,1 @@
+call RD /s "db"
