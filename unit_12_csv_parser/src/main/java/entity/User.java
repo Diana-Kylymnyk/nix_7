@@ -11,6 +11,7 @@ import java.time.LocalDate;
 @Setter
 @ToString
 public class User {
+
     @CSVMapping("id")
     long id;
     @CSVMapping("firstName")

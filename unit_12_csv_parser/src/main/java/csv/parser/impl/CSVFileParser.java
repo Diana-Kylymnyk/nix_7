@@ -15,7 +15,7 @@ public final class CSVFileParser implements CSVParser<Path> {
 
     @Override
     public Table parse(Path source) throws CSVException {
-        try(BufferedReader reader = Files.newBufferedReader(source)) {
+        try (BufferedReader reader = Files.newBufferedReader(source)) {
             String header = reader.readLine();
             if (header == null) {
                 throw new CSVException("Can't parse CSV, file is empty");

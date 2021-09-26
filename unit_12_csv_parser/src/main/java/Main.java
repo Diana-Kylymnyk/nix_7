@@ -20,8 +20,8 @@ public class Main {
 
                 CSVAnnotationMapper mapper = new CSVAnnotationMapper();
                 List<User> users = mapper.map(table, User.class);
-                for (User user:users){
-                    System.out.println(user.getFirstName()+ " " + user.getLastName());
+                for (User user : users) {
+                    System.out.println(user.getFirstName() + " " + user.getLastName());
                 }
             } catch (Exception e) {
                 throw new CSVException("Problem with parsing!");

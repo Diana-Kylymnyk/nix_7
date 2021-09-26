@@ -70,6 +70,5 @@ public final class CSVAnnotationMapper implements CSVMapper {
         } catch (Exception e) {
             throw new CSVException(e);
         }
-
     }
 }
