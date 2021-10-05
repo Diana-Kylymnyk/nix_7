@@ -13,7 +13,6 @@
 
     <properties>
         <lombok.version>1.18.20</lombok.version>
-        <junit.version>4.13.1</junit.version>
         <junit.jupiter.version>5.7.0</junit.jupiter.version>
         <maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>
         <maven.shade.plugin.version>3.2.0</maven.shade.plugin.version>
@@ -24,12 +23,6 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
