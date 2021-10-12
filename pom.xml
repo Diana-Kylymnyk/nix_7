@@ -22,6 +22,7 @@
         <module>unit_10_jdbs</module>
         <module>unit_11_reflection</module>
         <module>unit_12_csv_parser</module>
+        <module>unit_13_jpa_hibernate</module>
     </modules>
 
     <properties>
