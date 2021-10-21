@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/module_3_db?useSSL=false&amp;serverTimezone=UTC</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.format_sql">false</property>
+
+        <mapping class="com.alevel.entity.BasicEntity"/>
+        <mapping class="com.alevel.entity.Accounts"/>
+        <mapping class="com.alevel.entity.ExpenseCategory"/>
+        <mapping class="com.alevel.entity.IncomeCategory"/>
+        <mapping class="com.alevel.entity.OperationCategories"/>
+        <mapping class="com.alevel.entity.Operations"/>
+        <mapping class="com.alevel.entity.User"/>
+    </session-factory>
+
+</hibernate-configuration>
