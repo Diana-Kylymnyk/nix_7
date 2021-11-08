@@ -24,6 +24,7 @@
         <module>unit_12_csv_parser</module>
         <module>unit_13_jpa_hibernate</module>
         <module>module_3</module>
+        <module>unit_14_threads</module>
     </modules>
 
     <properties>
