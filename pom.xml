@@ -25,6 +25,7 @@
         <module>unit_13_jpa_hibernate</module>
         <module>module_3</module>
         <module>unit_14_threads</module>
+        <module>unit_15_servlets</module>
     </modules>
 
     <properties>
